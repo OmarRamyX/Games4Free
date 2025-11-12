@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Games4Free</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header container">
+      <div class="brand">
+        <img class="mini-logo" src="assets/svg/Logo.svg" alt="Games4Free Logo" />
+        <div class="brand-text">
+          <h1>Games4Free</h1>
+          <p class="tag">Free games — Enjoy &amp; share</p>
+        </div>
+      </div>
+      <nav class="navigation">
+        <a class="nav-btn" href="#games">Games</a>
+        <a class="nav-btn" href="#about">About Me</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Welcome to Games4Free</h2>
+        <p>Download awesome games quickly with style and subtle effects!</p>
+      </section>
+
+      <section id="games" class="games-section">
+        <h2 class="section-title">Games</h2>
+        <div class="games-grid">
+
+          <!-- Among Us -->
+          <article class="game-card card-amongus">
+            <div class="thumb">
+              <img src="assets/svg/AmongUs.svg" alt="Among Us" />
+            </div>
+            <div class="card-body">
+              <h3>Among Us</h3>
+              <p class="desc">
+                Multiplayer social deduction game. Players are crew members on a spaceship while impostors try to sabotage.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn download" href="downloads/Among.Us.v2022.4.19e- games4free.zip" download>Download</a>
+            </div>
+          </article>
+
+          <!-- Hollow Knight -->
+          <article class="game-card card-hollow">
+            <div class="thumb">
+              <img src="assets/svg/HollowKnight.svg" alt="Hollow Knight" />
+            </div>
+            <div class="card-body">
+              <h3>Hollow Knight</h3>
+              <p class="desc">
+                2D action-adventure game set in a vast, ruined kingdom of insects. Explore caverns and battle enemies.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn download" href="downloads/Hollow knight(games4free).rar" download>Download</a>
+            </div>
+          </article>
+
+          <!-- GTA San Andreas -->
+          <article class="game-card card-gta">
+            <div class="thumb">
+              <img src="assets/svg/GtaSanAndreas.svg" alt="GTA San Andreas" />
+            </div>
+            <div class="card-body">
+              <h3>GTA San Andreas</h3>
+              <p class="desc">
+                Open-world action-adventure game. Explore San Andreas, complete missions, drive vehicles, and experience a compelling story.
+              </p>
+            </div>
+            <div class="card-actions">
+              <a class="btn download" href="downloads/GTA-San-Andreas-games4free.com.zip" download>Download</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+          Games4Free provides free games safely and easily. Enjoy your favorite games with subtle animations and smooth interactions.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Games4Free — All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>
